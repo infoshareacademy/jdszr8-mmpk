@@ -1,4 +1,4 @@
-create table accidents_us as
+create table accidents as
 select 
 "ID" ,
 "Severity" ,
@@ -8,6 +8,8 @@ select
 "Start_Lng" ,
 "End_Lat" ,
 "End_Lng" ,
+"Distance(mi)" ,
+"Street" ,
 "City" ,
 "State" ,
 "Zipcode" ,
@@ -17,7 +19,6 @@ select
 "Humidity(%)" ,
 "Pressure(in)" ,
 "Visibility(mi)" ,
-"Wind_Direction" ,
 "Wind_Speed(mph)" ,
 "Precipitation(in)" ,
 "Weather_Condition" ,
