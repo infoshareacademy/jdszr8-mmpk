@@ -24,5 +24,5 @@ select
 "Weather_Condition" ,
 "Nautical_Twilight" 
 from us_accidents_dec21_updated uadu
-where to_char("Start_Time", 'YYYY-MM') BETWEEN '2016-04' and '2019-04';
+where to_char("Start_Time", 'YYYY-MM') BETWEEN '2016-04' and '2019-03';
  
