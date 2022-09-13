@@ -1,3 +1,4 @@
+select * from accidents a  ; 
 create table eu_unit as 
 select
 	"ID" ,
@@ -14,7 +15,8 @@ select
 	"State" ,
 	"Zipcode" ,
 	"Airport_Code" ,
-	"Country" ,
+	kraj ,
+	hrabstwo ,
 	"Weather_Timestamp" ,
 	(("Temperature(F)" -32)* 5 / 9) as Temperature_C,
 	"Humidity(%)" ,
