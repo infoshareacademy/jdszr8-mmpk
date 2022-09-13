@@ -23,7 +23,7 @@ select
 		else null
 	end as Pressure_hpa,
 	("Visibility(mi)" * 1.6093) as Visibility_km,
-	("Wind_Speed(mph)" * 1.6109344) as Wind_Speed_kmh ,
+	("Wind_Speed(mph)" * 1.6093) as Wind_Speed_kmh ,
 	("Precipitation(in)" * 16.387 ) as Precipitation_ml,
 	"Weather_Condition" ,
 	"Nautical_Twilight"
