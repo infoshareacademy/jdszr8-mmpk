@@ -60,14 +60,14 @@ select * from v_opady;
 
 						
 select sum(liczba_wypadkow), ciagi_opadowe,
-(sum(liczba_wypadkow) *100/495580) as procent
+round((sum(liczba_wypadkow) *100/495580),1) as procent
 from (
 											select *, 
 											case 
-												when ciaglosc_daty = 'nastepny dzien' and opady_deszczu > 0 and poprzedni_opad >0 then ' Opady i ci¹g³oœæ' 
+												when ciaglosc_daty = 'nastepny dzien' and opady_deszczu > 0 and poprzedni_opad >0  then ' Opady i ci¹g³oœæ' 
 												when ciaglosc_daty = 'nastepny dzien' and opady_deszczu > 0 and poprzedni_opad = 0 then 'Pierwszy dzien opadów (ciag w dacie)'
-												when ciaglosc_daty = 'nastepny dzien' and opady_deszczu = 0 and poprzedni_opad > 0 then 'Dzien po opadach (ciag w dacie)'
-												when ciaglosc_daty = 'nastepny dzien' and opady_deszczu = 0 and poprzedni_opad = 0 then 'Brak opadów w ciagu ale ci¹g³oœæ w dacie '
+												when (ciaglosc_daty = 'nastepny dzien' and opady_deszczu = 0 and poprzedni_opad = 0)
+												or (ciaglosc_daty = 'nastepny dzien' and opady_deszczu = 0 and poprzedni_opad > 0) then 'Brak opadów w ciagu ale ci¹g³oœæ w dacie '
 												when (ciaglosc_daty = 'nie' and opady_deszczu > 0) or (ciaglosc_daty = 'nie' and opady_deszczu = 0 ) then 'Brak ciag³oœci daty '
 											end as ciagi_opadowe
 											from (
