@@ -1,4 +1,4 @@
-create table accidents as
+create table eu_unit as
 select 
 "ID" ,
 "Severity" ,
@@ -8,7 +8,7 @@ select
 "Start_Lng" ,
 "End_Lat" ,
 "End_Lng" ,
-"Distance(mi)" ,
+("Distance(mi)" * 1.6093) as Distance_km,
 "Street" ,
 "City" ,
 "State" ,
@@ -17,12 +17,15 @@ select
 "County" as Hrabstwo,
 "Country" as Kraj,
 "Weather_Timestamp" ,
-"Temperature(F)" ,
+(("Temperature(F)" -32)* 5 / 9) as Temperature_C,
 "Humidity(%)" ,
-"Pressure(in)" ,
-"Visibility(mi)" ,
-"Wind_Speed(mph)" ,
-"Precipitation(in)" ,
+case 
+	when "Pressure(in)"  between 29.40 and 30.80 then "Pressure(in)" * 33.8638
+	else null
+end as Pressure_hpa,
+("Visibility(mi)" * 1.6093) as Visibility_km,
+("Wind_Speed(mph)" * 1.6093) as Wind_Speed_kmh ,
+("Precipitation(in)" * 16.387 ) as Precipitation_ml,
 "Weather_Condition" ,
 "Nautical_Twilight" 
 from us_accidents_dec21_updated uadu
