@@ -10,7 +10,7 @@ select
 	"End_Lat" ,
 	"End_Lng" ,
 	("Distance(mi)" * 1.6093) as Distance_km,
-	"Street" 
+	"Street" ,
 	"City" ,
 	"State" ,
 	"Zipcode" ,
