@@ -1,0 +1,7 @@
+Kolejność uruchamiania:
+
+000_cleaning_of_commodities_column
+013-STR16
+021-kod_iso
+030-category_columns
+040_electricity
