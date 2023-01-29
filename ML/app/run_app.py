@@ -16,7 +16,7 @@ def main():
     
     st.markdown(html_temp,unsafe_allow_html=True)
     
-    model = joblib.load('joblib_model_xgb')
+    model = joblib.load('model_xgb')
     
     p1 = st.slider('Enter Your Age',18,100)
     

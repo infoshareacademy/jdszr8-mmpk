@@ -4,6 +4,6 @@ Predykcja kosztu odbywa się przy użyciu modelu ML xgBoost.
 
 Przed odpaleniem aplikacji zainstaluj bibliotekę streamlit. 
 
-Aby uruchomić aplikację uruchom skrypt "app_py.py"
+Aby uruchomić aplikację uruchom skrypt "runn.py"
 
 Aplikacja otworzy się lokalnie przy użyciu domyślnej przeglądarki 
