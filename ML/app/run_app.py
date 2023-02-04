@@ -23,9 +23,9 @@ def main():
     s1 = st.selectbox('Sex',('Male','Female'))
     
     if s1=='Male':
-        p2=1
-    else:
         p2=0
+    else:
+        p2=1
 
 
     sel_box = st.selectbox("Do you know level of your BMI?", ("Yes", "No"))
