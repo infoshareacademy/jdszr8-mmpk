@@ -1,0 +1,5 @@
+,model,R2-train,R2-test,MAE,MSE,RMSE
+0,RandomForestRegressor,0.86,0.87,2725,22456880,4739
+1,DecisionTreeRegressor,0.85,0.86,2970,24462235,4946
+2,XGBRegressor,0.93,0.86,2715,24000270,4899
+3,DummyRegressor,0.0,-0.0,9443,170730838,13066
